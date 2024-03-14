@@ -14,6 +14,6 @@ const std::string&  ASpell::getEffects() const{
     return(this->effects);
 }
 
-void ASpell::launch(const ATarget& obj)const{
+void ASpell::launch(ATarget const &obj)const{
     obj.getHitBySpell(*this);
 }

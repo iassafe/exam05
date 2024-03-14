@@ -1,6 +1,6 @@
 #include"ATarget.hpp"
 
-ATarget::ATarget(const std::string& type){
+ATarget::ATarget(const std::string& type) : type(type){
 }
 
 ATarget::~ATarget(){
