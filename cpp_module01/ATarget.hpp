@@ -3,18 +3,21 @@
 #include<iostream>
 #include"ASpell.hpp"
 class ASpell;
+
+
 class ATarget{
-    private:
+    protected:
         std::string type;
     public:
         ATarget(std::string const &type);
-        virtual ~ATarget();
+        virtual~ATarget();
+        std::string const &getType();
 
-        const std::string& getType() const;
-        virtual ATarget* clone()const=0;
-
-        void getHitBySpell(const ASpell &obj) const;
+        virtual ATarget *clone() const=0;
+        void getHitBySpell(ASpell const &Spell);
 
 };
+
+
 
 #endif
