@@ -10,13 +10,12 @@ class Warlock{
         Warlock(std::string const &name, std::string const &title);
         ~Warlock();
 
-        const std::string& getName() const;
-        const std::string&  getTitle() const;
-        void setTitle(const std::string& title);
-        
+        std::string const &getName() const;
+        std::string const &getTitle() const;
+
+        void setTitle(std::string const &title);
 
         void introduce() const;
-
 };
 
 #endif

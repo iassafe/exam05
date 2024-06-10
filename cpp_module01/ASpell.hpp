@@ -11,14 +11,17 @@ class ASpell{
     public:
         ASpell(std::string const &name, std::string const &effects);
         virtual~ASpell();
+
+        ASpell();
+        ASpell(ASpell const &obj);
+        ASpell &operator=(ASpell const &obj);
+
         std::string const &getName() const;
         std::string const &getEffects() const;
-        void launch(ATarget &Target) const;
 
         virtual ASpell *clone() const=0;
-
+        void launch(ATarget const &target) const;
 
 };
-
 
 #endif
